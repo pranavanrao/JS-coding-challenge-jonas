@@ -15,10 +15,24 @@ scores = [0, 0];
 roundScore = 0;
 activePlayer = 1;
 
-dice = Math.floor((Math.random()*6)+1);
+
 
 // document.querySelector('#current-' + activePlayer).textContent = dice;
 
 // document.querySelector('#current-' + activePlayer).innerHTML = '<b>' + dice + '</b>';
 
-document.querySelector('.dice').style.display = 'none';
+// document.querySelector('.dice').style.display = 'none';
+
+document.querySelector('.btn-roll').addEventListener('click', function() {
+    
+    var dice = Math.floor((Math.random()*6)+1);
+
+    var diceDom = document.querySelector('.dice');
+    diceDom.style.display = 'block';
+
+    diceDom.src = 'dice-'+dice+'.png';
+
+})
+
+
+
